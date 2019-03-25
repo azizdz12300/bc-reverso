@@ -1,4 +1,7 @@
-﻿          client.on('message', message => {
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+client.on('message', message => {
             var prefix = "+"; //walter.js#2002
                   if(!message.channel.guild) return;
         if(message.content.startsWith(prefix + 'bc')) {
@@ -41,3 +44,5 @@
         })
         }
         }); //walter.js#2002
+
+client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
